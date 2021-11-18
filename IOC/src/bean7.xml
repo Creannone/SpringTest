@@ -3,10 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="emp" class="bean.Emp" autowire="byName">
-        <property name="ename" value="1"></property>
-        <property name="gender" value="nan"></property>
+    <bean id="orders" class="BeanLife.Orders" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="qqq"></property>
     </bean>
-    <bean id="dept" class="bean.Dept"></bean>
-
 </beans>

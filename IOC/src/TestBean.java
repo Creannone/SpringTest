@@ -1,8 +1,7 @@
+import BeanLife.Orders;
 import CollectionTest.Stu;
 import FactoryBean.Course;
-import Service.UserService;
 import bean.Emp;
-import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -29,4 +28,14 @@ public class TestBean {
         Course course = context.getBean("myBean",Course.class);
         System.out.println(course);
     }
+
+    @Test
+    public void test4(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean7.xml");
+        Orders orders = context.getBean("orders",Orders.class);
+        System.out.println("4.获取实例对象--------------");
+        System.out.println(orders);
+        context.close();
+    }
+
 }
