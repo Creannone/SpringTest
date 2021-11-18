@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p ="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="test1.User"></bean>
+    <bean id="user" class="test1.User">
+        <property name="name">
+            <value><![CDATA[<<><><><><>>asdasd>]]></value>
+        </property>
+        <property name="id" value="1"></property>
+    </bean>
 
+<!--    <bean id="user" class="test1.User" p:id="1" p:name="aaa"></bean>-->
 </beans>
