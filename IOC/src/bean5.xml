@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stu" class="CollectionTest.Stu">
+        <property name="courses">
+            <array>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>ddd</value>
+                <value>eee</value>
+                <value>fff</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="111" value="222"></entry>
+                <entry key="333" value="444"></entry>
+                <entry key="555" value="666"></entry>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </set>
+        </property>
+    </bean>
+
+</beans>
