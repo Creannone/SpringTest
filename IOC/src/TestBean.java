@@ -1,9 +1,12 @@
 import BeanLife.Orders;
 import CollectionTest.Stu;
 import FactoryBean.Course;
+import Service.UserService;
 import bean.Emp;
+import config.SpringConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestBean {
@@ -38,4 +41,26 @@ public class TestBean {
         context.close();
     }
 
+    @Test
+    public void test5(){
+        BeanFactory context = new ClassPathXmlApplicationContext("bean7.xml");
+        BeanFile beanFile = context.getBean("beanFile",BeanFile.class);
+        System.out.println(beanFile);
+    }
+
+    @Test
+    public void test6(){
+        BeanFactory context = new ClassPathXmlApplicationContext("bean8.xml");
+        UserService userService = context.getBean("userService",UserService.class);
+        System.out.println(userService);
+        userService.test();
+    }
+
+    @Test
+    public void test7(){
+        BeanFactory context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        UserService userService = context.getBean("userService",UserService.class);
+        System.out.println(userService);
+        userService.test();
+    }
 }
